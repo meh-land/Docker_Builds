@@ -9,3 +9,8 @@ Each Folder in this repository will correspond to a certain docker container, an
 This is the base image that will be used to build other images. I wanted to build on debian, but the official debian image lacks some utilities that we will need for maintaining containers, so I created an image that is derived from the debian image and added all the missing utilities.
 
 As our needs evolve, this image will evolve as well.
+
+
+## Ubuntu_Base
+
+Same as `Deb_Base` but based on Ubuntu.
