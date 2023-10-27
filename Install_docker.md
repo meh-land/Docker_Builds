@@ -8,3 +8,12 @@
 ![](windows_docker_install.png)
 
 1. Execute the installer and choose to use wsl NOT hyper-v
+
+## On Linux
+
+There is an official convenience script, use these two commands to get the script and run it
+
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh ./get-docker.sh --dry-run
+```
