@@ -5,7 +5,6 @@ section () {
 	tput setaf 1
 	echo $1
 	tput sgr0
-    sleep 10
 }
 
 set -e
