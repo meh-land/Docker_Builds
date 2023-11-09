@@ -7,4 +7,5 @@ RUN wget https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.4/xampp-
 RUN chmod +x xampp-linux-x64-8.2.4-0-installer.run
 RUN yes | ./xampp-linux-x64-8.2.4-0-installer.run
 RUN apt install nodejs npm -y
-CMD bash
+RUN cd ~/web_App && npm install
+CMD cd ~/web_App && npm start
