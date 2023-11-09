@@ -1,0 +1,25 @@
+version: "2.21"
+services:
+  ros:
+    image: yahiawalid/ros2:1.0
+    ports:
+      - 7400:7400/udp            # Discovery Multicast Port
+      - 7401:7401/udp            # User Multicast Port
+      # Discovery/User Unicast Ports (Assuming no more than 10 ros processes will run on the server)
+      - 7411:7411/udp 
+      - 7412:7412/udp 
+      - 7413:7413/udp 
+      - 7414:7414/udp 
+      - 7415:7415/udp 
+      - 7416:7416/udp 
+      - 7417:7417/udp 
+      - 7418:7418/udp 
+      - 7419:7419/udp 
+      - 7420:7420/udp 
+      - 7421:7421/udp 
+      - 7422:7422/udp 
+      - 7424:7424/udp 
+      - 7426:7426/udp 
+      - 7428:7428/udp 
+      - 7430:7430/udp 
+      - 7431:7431/udp 
