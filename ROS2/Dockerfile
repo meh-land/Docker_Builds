@@ -27,4 +27,4 @@ RUN apt install ros-humble-demo-nodes-cpp -y
 RUN apt install ros-humble-demo-nodes-py -y
 
 
-CMD bash
+CMD sleep 200
