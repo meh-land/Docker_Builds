@@ -1,4 +1,4 @@
-FROM yahiawalid/ubuntu_base:curl
+FROM yahiawalid/ubuntu_base:git
 # Set Locale
 RUN apt update && apt upgrade -y && apt install locales -y
 RUN locale-gen en_US en_US.UTF-8
