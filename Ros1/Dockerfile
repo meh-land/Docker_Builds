@@ -2,4 +2,14 @@ FROM osrf/ros:noetic-desktop-full-focal
 RUN apt update && apt upgrade -y
 RUN apt install vim tmux git htop -y
 RUN echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc
+
+# Create ROS WS
+RUN mkdir -p ~/my_ws/src
+RUN cd ~/my_ws
+RUN /bin/bash -c '. /opt/ros/noetic/setup.bash; cd ~/my_ws; catkin_make'
+RUN echo 'source ~/my_ws/devel/setup.bash' >> ~/.bashrc
+
+# Create ROS Package
+RUN /bin/bash -c '. /opt/ros/noetic/setup.bash; cd ~/my_ws/src; catkin_create_pkg torta_web_control rospy'
+RUN /bin/bash -c '. /opt/ros/noetic/setup.bash; cd ~/my_ws; catkin_make'
 CMD roscore
