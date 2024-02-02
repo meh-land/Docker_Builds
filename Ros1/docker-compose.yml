@@ -1,7 +1,8 @@
 version: '2'
 
 services:
-  ros_noetic:
-    image: your_image_name:tag
-    container_name: ros_noetic_web_dev
-    network_mode: "host"
+        ros_web_dev:
+                image: yahiawalid/ros_web:net
+                container_name: ros_noetic_web_dev
+                network_mode: "host"
+
