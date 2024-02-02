@@ -11,5 +11,8 @@ RUN echo 'source ~/my_ws/devel/setup.bash' >> ~/.bashrc
 
 # Create ROS Package
 RUN /bin/bash -c '. /opt/ros/noetic/setup.bash; cd ~/my_ws/src; catkin_create_pkg torta_web_control rospy'
+WORKDIR /root/my_ws/src/torta_web_control
+# RUN mkdir scripts && cd scripts
+RUN git clone https://github.com/meh-land/simple_UI_ROS.git ./scripts
 RUN /bin/bash -c '. /opt/ros/noetic/setup.bash; cd ~/my_ws; catkin_make'
 CMD roscore
