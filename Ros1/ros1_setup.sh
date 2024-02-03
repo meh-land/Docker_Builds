@@ -44,4 +44,11 @@ section "Get ros python scripts"
 git clone https://github.com/meh-land/simple_UI_ROS.git ~/my_ws/src/torta_web_control/scripts
 cd ~/my_ws
 catkin_make
+
+section "Setup ssh"
+sudo systemctl start ssh
+sudo ufw allow 22
+sudo ufw enable
+
+
 set +e
