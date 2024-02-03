@@ -27,4 +27,21 @@ section "Environment setup"
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
+section "Install my software"
+sudo apt install vim tmux git htop net-tools inetutils-ping openssh-server ufw -y
+
+section "Create Ros WS"
+mkdir -p ~/my_ws/src
+cd ~/my_ws
+catkin_make
+echo 'source ~/my_ws/devel/setup.bash' >> ~/.bashrc
+
+section "Create Ros package"
+cd ~/my_ws/src
+catkin_create_pkg torta_web_control rospy
+
+section "Get ros python scripts"
+git clone https://github.com/meh-land/simple_UI_ROS.git ~/my_ws/src/torta_web_control/scripts
+cd ~/my_ws
+catkin_make
 set +e
